@@ -96,5 +96,4 @@
         android:textSize="50dp"
         tools:layout_editor_absoluteX="315dp"
         tools:layout_editor_absoluteY="534dp" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
