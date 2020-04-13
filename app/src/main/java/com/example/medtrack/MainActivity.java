@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.cancelBtn).setOnClickListener(this);
     }
 
-    @Override
+   /* @Override
     public void onClick(View view) {
         EditText editText = findViewById(R.id.editText);
         TimePicker timePicker = findViewById(R.id.timePicker);
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AlarmManager am = (AlarmManager) MainActivity.this.getSystemService(MainActivity.this.ALARM_SERVICE);
                 am.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);*/
 
-                alarm.set(AlarmManager.RTC_WAKEUP, alarmStartTime, alarmIntent);
+               /* alarm.set(AlarmManager.RTC_WAKEUP, alarmStartTime, alarmIntent);
 
                 Toast.makeText(this, "Done!", Toast.LENGTH_SHORT).show();
                 break;
@@ -72,7 +72,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "Canceled.", Toast.LENGTH_SHORT).show();
                 break;
 
-        }
+*/        }*/
+
+
+
+ // context variable contains your `Context`
+AlarmManager mgrAlarm = (AlarmManager) context.getSystemService(ALARM_SERVICE);
+ArrayList<PendingIntent> intentArray = new ArrayList<PendingIntent>();
+
+for(i = 0; i < 10; ++i)
+{
+Intent intent = new Intent(context, OnAlarmReceiver.class);
+
+// Loop counter `i` is used as a `requestCode`
+PendingIntent pendingIntent = PendingIntent.
+                      getBroadcast(context, i, intent, 0);
+
+// Single alarms in 1, 2, ..., 10 minutes (in `i` minutes)
+mgrAlarm.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                SystemClock.elapsedRealtime() + 60000 * i,
+                pendingIntent);
+
+intentArray.add(pendingIntent);
+}
+
+
+
+alarmmanager.cancel(intentArray.get(i));  //where i is position of alarm you want to cancel.
     }
 }
 
