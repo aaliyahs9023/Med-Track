@@ -7,37 +7,52 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:background="#ffffff">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter your time"
-        android:layout_marginBottom="20dp"/>
-    
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="300dp"
-        android:layout_height="342dp"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="MedTrack"
+        android:textSize="70dp"
+        android:textAlignment="center"
+        android:textColor="#ff3232"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="30dp">
-        <Button
-            android:id="@+id/setBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="set"
-            android:layout_marginRight="20dp"/>
-        <Button
-            android:id="@+id/cancelBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="cancel"/>
-    </LinearLayout>
+<!--    <EditText-->
+<!--        android:id="@+id/editText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Enter your time"-->
+<!--        android:layout_marginBottom="20dp"/>-->
+<!--    -->
+<!--    <TimePicker-->
+<!--        android:id="@+id/timePicker"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="342dp"/>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:layout_marginTop="30dp">-->
+<!--        <Button-->
+<!--            android:id="@+id/setBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="set"-->
+<!--            android:layout_marginRight="20dp"/>-->
+<!--        <Button-->
+<!--            android:id="@+id/cancelBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="cancel"/>-->
+<!--    </LinearLayout>-->
+
 <!--    <com.google.android.material.appbar.AppBarLayout-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
